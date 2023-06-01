@@ -13,15 +13,27 @@ function App(){
       isCompleted: false,
     },
   ])
+  const addTodo = text => {
+    const newTodos = [...todos, {text, isCompleted: false}]
+    setTodos(newTodos)
+  }
+  const removeTodo = index => {
+    const newTodos = [...todos]
+    newTodos.splice(index, 1)
+    setTodos(newTodos)
+  }
 
   return(
     <>
-      {todos.map((todo, i) => <div key={i}>{todo.text}</div>)}
+      {todos.map((todo, i) => <div key={i} onClick={removeTodo}>{todo.text}</div>)}
+      <TodoForm addTodo={addTodo}/>
     </>
   );
 }
 
-ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
