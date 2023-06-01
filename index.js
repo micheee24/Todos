@@ -5,19 +5,7 @@ function App(){
       isCompleted: false,
     },
     {
-      text: 'meet friend for lunch',
-      isCompleted: false,
-    },
-    {
       text: 'build todo app',
-      isCompleted: false,
-    },
-    {
-      text: 'learn HTML',
-      isCompleted: false,
-    },
-    {
-      text: 'learn CSS',
       isCompleted: false,
     },
     {
