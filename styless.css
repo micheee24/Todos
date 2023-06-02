@@ -1,14 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+form{
+  margin: 75px;
+}
 h1{
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 42px;
+  background: #e08900;
+  box-shadow: inset 8px 8px 19px #945a00,
+  inset -8px -8px 19px #ffb800;
+  margin-left: 200px;
+  margin-right: 200px;
 }
-div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+div.app{
+  margin-left: 400px;
+  margin-right: 400px;
   font-size: 1.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+div.todo{
+  margin:50px;
+  padding:3px 10px 0px 10px;
+  border-radius: 73px;
+  background: #e08900;
+  box-shadow: 5px 5px 16px #724600,
+        -5px -5px 16px #ffcc00;
+}
+body{
+  background-color: #e08900;
+}
+.input{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-left: 20px;
+  border-radius: 41px;
+  background: #e08900;
+  box-shadow: inset 24px 24px 34px #925900,
+      inset -24px -24px 34px #ffb900;
+  border-bottom-style: solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
 
 }
+
+.todo{
+  border-bottom: 2px solid black;
+}
+
+/* CheckBox */
+
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: flex;
+  align-items: end;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #ccc;
+  border-radius: 100%;
+  background: #e8e8e8;
+  box-shadow: 3px 3px 5px #c5c5c5,
+    -3px -3px 5px #ffffff;
+  transition-duration: 0.5s;
+  margin-left: 270px;
+}
+
+.container input:checked~.checkmark {
+  box-shadow: inset 3px 3px 5px #c5c5c5,
+    inset -3px -3px 5px #ffffff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.container input:checked~.checkmark:after {
+  opacity: 1;
+}
+
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid darkgray;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+
+

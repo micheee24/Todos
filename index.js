@@ -1,32 +1,37 @@
-function App(){
+function App() {
   const [todos, setTodos] = React.useState([
     {
-      text: 'learn react',
+      text: "learn react",
       isCompleted: false,
     },
     {
-      text: 'build todo app',
+      text: "build todo app",
       isCompleted: false,
     },
     {
-      text: 'learn JavaScript',
+      text: "learn JavaScript",
       isCompleted: false,
     },
-  ])
-  const addTodo = text => {
-    const newTodos = [...todos, {text, isCompleted: false}]
-    setTodos(newTodos)
-  }
-  const removeTodo = index => {
-    const newTodos = [...todos]
-    newTodos.splice(index, 1)
-    setTodos(newTodos)
-  }
+  ]);
+  const addTodo = (text) => {
+    const newTodos = [...todos, { text, isCompleted: false }];
+    setTodos(newTodos);
+  };
+  const removeTodo = (index) => {
+    let temp = [...todos];
+    temp.splice(index, 1);
+    setTodos(temp);
+  };
 
-  return(
+  return (
     <>
-      {todos.map((todo, i) => <div key={i} onClick={removeTodo}>{todo.text}</div>)}
-      <TodoForm addTodo={addTodo}/>
+      <div className="app">
+        <div className="todo-list"></div>
+        {todos.map((todo, i) => (
+          <Todo key={i} index={i} todo={todo} remove={removeTodo} />
+        ))}
+        <TodoForm addTodo={addTodo} />
+      </div>
     </>
   );
 }
