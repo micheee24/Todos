@@ -135,12 +135,12 @@ element{
   top: 0.25em;
   width: 0.25em;
   height: 0.5em;
-  border: solid darkgray;
+  border: solid #FEBF00;
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
 }
 .container .checkmark:hover{
-  opacity:  0.5;
+  opacity:  .8;
 }
 
 
