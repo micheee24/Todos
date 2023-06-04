@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
 
 form{
+  display: flex;
+  justify-content: center;
   margin: 75px;
 }
 h1{
@@ -8,7 +11,7 @@ h1{
   justify-content: center;
   align-items: center;
   font-size: 3.5rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   border-radius: 42px;
   background: #e08900;
   box-shadow: inset 8px 8px 19px #945a00,
@@ -16,19 +19,29 @@ h1{
   margin-left: 200px;
   margin-right: 200px;
 }
+.parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right:160px;
+}
 div.app{
-  margin-left: 400px;
-  margin-right: 400px;
   font-size: 1.5rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 div.todo{
-  margin:50px;
+  margin:25px;
   padding:3px 10px 0px 10px;
   border-radius: 73px;
   background: #e08900;
   box-shadow: 5px 5px 16px #724600,
         -5px -5px 16px #ffcc00;
+  transition: transform 0.5s ease-in-out;
+  min-width: 300px;
+  max-height: fit-content;
+}
+div.todo:hover{
+  transform: scale(1.2);
 }
 body{
   background-color: #e08900;
@@ -36,23 +49,28 @@ body{
 .input{
   display: flex;
   align-items: center;
+  margin-right: 463px;
   font-size: 1.5rem;
   font-weight: 800;
   font-family: 'Roboto Condensed', sans-serif;
   padding-left: 20px;
-  border-radius: 41px;
-  background: #e08900;
-  box-shadow: inset 24px 24px 34px #925900,
-      inset -24px -24px 34px #ffb900;
-  border-bottom-style: solid;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-left-style: solid;
-  border-right-width: 0px;
-  border-left-width: 0px;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
+  border-radius: 10px;
+  outline: 2px solid #FEBF00;
+  border: 0;
+  background-color: #f3c0a1;
+  outline-offset: 3px;
+  padding: 10px 1rem;
+  transition: 0.25s;
 
+  transition: transform 0.5s ease-in-out;
+
+}
+.input:hover{
+  transform: scale(1.2);
+}
+.input:focus {
+  outline-offset: 5px;
+  background-color: #fff
 }
 
 .todo{
@@ -62,6 +80,9 @@ body{
 /* CheckBox */
 
 /* Hide the default checkbox */
+element{
+  right: 250px;
+}
 .container input {
   position: absolute;
   opacity: 0;
@@ -71,12 +92,11 @@ body{
 }
 
 .container {
-  display: flex;
-  align-items: end;
   position: relative;
   cursor: pointer;
   font-size: 20px;
   user-select: none;
+  right: 270px;
 }
 
 /* Create a custom checkbox */
@@ -119,6 +139,8 @@ body{
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
 }
-
+.container .checkmark:hover{
+  opacity:  0.5;
+}
 
 

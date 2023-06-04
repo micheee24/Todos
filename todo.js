@@ -4,12 +4,13 @@ function Todo({ todo, index, remove }) {
     remove(index);
   }
   return (
-    <div className="todo" onClick={handle}>
-      {todo.text}
-      <label class="container">
+    <div className = 'parent'>
+    <div className="todo" >
+      {todo.text}</div>      
+      <div class="container">
         <input type="checkbox" checked="checked" />
-        <div class="checkmark"></div>
-      </label>
+        <div class="checkmark"onClick={handle}></div>
+      </div>
     </div>
   );
 }
