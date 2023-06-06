@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&display=swap');
 
-form{
+form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,8 @@ form{
   padding: 0px 0px 10px 0px;
 
 }
-h1{
+
+h1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,34 +19,38 @@ h1{
   border-radius: 42px;
   background: #e08900;
   box-shadow: inset 8px 8px 19px #945a00,
-  inset -8px -8px 19px #ffb800;
+    inset -8px -8px 19px #ffb800;
   margin-left: 200px;
   margin-right: 200px;
   min-width: 70%;
   min-height: 70%;
 }
-body{
+
+body {
   background-color: #e08900;
 }
-.parent{
+
+.parent {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 200px;
 }
-.app{
+
+.app {
   font-size: 2vw;
   font-family: 'Cormorant Garamond', serif;
   border-radius: 38px;
   background: linear-gradient(145deg, #f09300, #ca7b00);
   box-shadow: 10px 10px 41px #633c00,
-      -10px -10px 41px #ffd600;
+    -10px -10px 41px #ffd600;
   margin: 60px 500px 0px 200px;
   min-width: 60%;
 }
-.todo{
+
+.todo {
   display: flex;
-  margin:20px;
+  margin: 20px;
   min-width: 70%;
   min-height: auto;
   padding: 10px 10px 10px 20px;
@@ -55,11 +60,12 @@ body{
     -5px -5px 15px #ffa700;
   transition: transform 0.5s ease-in-out;
 }
-.todo:hover{
+
+.todo:hover {
   transform: scale(1.2);
 }
 
-.input{
+.input {
   margin-bottom: 10px;
   min-width: 65%;
   font-family: 'Roboto Condensed', sans-serif;
@@ -71,9 +77,11 @@ body{
   padding: 10px 1rem;
   transition: transform 0.5s ease-in-out;
 }
-.input:hover{
+
+.input:hover {
   transform: scale(1.2);
 }
+
 .input:focus {
   outline-offset: 5px;
   background-color: #ffffff
@@ -140,8 +148,7 @@ body{
   border-width: 0 0.15em 0.15em 0;
   transform: rotate(45deg);
 }
-.container .checkmark:hover{
-  opacity:  .8;
+
+.container .checkmark:hover {
+  opacity: .8;
 }
-
-
