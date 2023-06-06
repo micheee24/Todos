@@ -4,13 +4,16 @@
 form{
   display: flex;
   justify-content: center;
-  margin: 75px;
+  align-items: center;
+  margin: 50px 100px 30px 0px;
+  padding: 0px 0px 10px 0px;
+
 }
 h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3.5rem;
+  font-size: 4vw;
   font-family: 'Cormorant Garamond', serif;
   border-radius: 42px;
   background: #e08900;
@@ -18,71 +21,68 @@ h1{
   inset -8px -8px 19px #ffb800;
   margin-left: 200px;
   margin-right: 200px;
+  min-width: 70%;
+  min-height: 70%;
+}
+body{
+  background-color: #e08900;
 }
 .parent{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right:160px;
+  margin-left: 200px;
 }
-div.app{
-  font-size: 1.5rem;
+.app{
+  font-size: 2vw;
   font-family: 'Cormorant Garamond', serif;
+  border-radius: 38px;
+  background: linear-gradient(145deg, #f09300, #ca7b00);
+  box-shadow: 10px 10px 41px #633c00,
+      -10px -10px 41px #ffd600;
+  margin: 60px 500px 0px 200px;
+  min-width: 60%;
 }
-div.todo{
-  margin:25px;
-  padding:3px 10px 0px 10px;
-  border-radius: 73px;
+.todo{
+  display: flex;
+  margin:20px;
+  min-width: 70%;
+  min-height: auto;
+  padding: 10px 10px 10px 20px;
+  border-radius: 14px;
   background: #e08900;
-  box-shadow: 5px 5px 16px #724600,
-        -5px -5px 16px #ffcc00;
+  box-shadow: 5px 5px 15px #af6b00,
+    -5px -5px 15px #ffa700;
   transition: transform 0.5s ease-in-out;
-  min-width: 300px;
-  max-height: fit-content;
 }
-div.todo:hover{
+.todo:hover{
   transform: scale(1.2);
 }
-body{
-  background-color: #e08900;
-}
+
 .input{
-  display: flex;
-  align-items: center;
-  margin-right: 463px;
-  font-size: 1.5rem;
-  font-weight: 800;
+  margin-bottom: 10px;
+  min-width: 65%;
   font-family: 'Roboto Condensed', sans-serif;
-  padding-left: 20px;
   border-radius: 10px;
   outline: 2px solid #FEBF00;
   border: 0;
   background-color: #f3c0a1;
   outline-offset: 3px;
   padding: 10px 1rem;
-  transition: 0.25s;
-
   transition: transform 0.5s ease-in-out;
-
 }
 .input:hover{
   transform: scale(1.2);
 }
 .input:focus {
   outline-offset: 5px;
-  background-color: #fff
-}
-
-.todo{
-  border-bottom: 2px solid black;
+  background-color: #ffffff
 }
 
 /* CheckBox */
 
 /* Hide the default checkbox */
-element{
-  right: 250px;
-}
+
 .container input {
   position: absolute;
   opacity: 0;
@@ -128,6 +128,7 @@ element{
 
 .container input:checked~.checkmark:after {
   opacity: 1;
+
 }
 
 .container .checkmark:after {
